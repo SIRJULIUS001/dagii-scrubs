@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us - Scrubs Website{% endblock %}
+{% block content %}
+
+<div class="container my-5  font-family: 'Roboto', 'Open Sans', 'Lato', sans-serif">
+
+  <!-- Friendly Intro -->
+  <div class="row align-items-center mb-5  ">
+    <div class="col-md-6">
+      <h2 class="fw-bold">Hey there 👋</h2>
+      <p class="lead font-family: 'Roboto', 'Open Sans', 'Lato', sans-serif">
+        We’re <strong>DAGII SCRUBS</strong> — and we believe scrubs shouldn’t just be uniforms. 
+        They should make you feel <em>comfortable, confident, and ready</em> to take on the day.
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="{% static 'images/img1.png' %}" alt="Healthcare professional smiling in scrubs" class="img-fluid rounded shadow-sm about-img">
+    </div>
+  </div>
+
+  <!-- Our Story -->
+  <div class="row align-items-center mb-5 flex-md-row-reverse">
+    <div class="col-md-6">
+      <h2 class="fw-bold">Our Story 💙</h2>
+      <p>
+        It all started in <strong>2024</strong> with a simple idea:  
+        “What if scrubs were actually fun to wear?”  
+        We wanted to create workwear that could keep up with long shifts, tough days, and still make you feel good.  
+        That’s how <strong>[Brand Name]</strong> was born.
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="{% static 'images/img2.png' %}" alt="Founders working on scrubs design" class="img-fluid rounded shadow-sm about-img">
+    </div>
+  </div>
+
+  <!-- Mission & Vision -->
+  <div class="row text-center mb-5">
+    <div class="col-md-6 p-4 bg-light rounded shadow-sm">
+      <img src="{% static 'images/img3.png' %}" alt="Doctor and nurse walking confidently" class="mb-3 small-icon">
+      <h3>Our Mission 🌟</h3>
+      <p>To support everyday heroes with scrubs that blend comfort, durability, and style — without breaking the bank.</p>
+    </div>
+    <div class="col-md-6 p-4 bg-light rounded shadow-sm">
+      <img src="{% static 'images/img4.png' %}" alt="Medical team working together" class="mb-3 small-icon">
+      <h3>Our Vision 👀</h3>
+      <p>To be the scrubs brand healthcare workers actually love to wear, all around the world.</p>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">What We Care About ❤️</h2>
+    <img src="{% static 'images/img5.png' %}" alt="Close-up of scrubs fabric and stitching" class="img-fluid rounded shadow-sm about-img my-3">
+    <ul class="list-group list-group-flush d-inline-block text-start">
+      <li class="list-group-item">✔ <strong>Quality</strong> – Scrubs that last wash after wash</li>
+      <li class="list-group-item">✔ <strong>Comfort</strong> – Because 12-hour shifts are no joke</li>
+      <li class="list-group-item">✔ <strong>Affordability</strong> – Premium feel, fair price</li>
+      <li class="list-group-item">✔ <strong>Style</strong> – Modern fits, fresh colors</li>
+      <li class="list-group-item">✔ <strong>Sustainability</strong> – Doing our part for the planet</li>
+    </ul>
+  </div>
+
+  <!-- Difference -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <h2 class="fw-bold">Why Choose Us? ✨</h2>
+      <ul class="list-unstyled mt-3">
+        <li>🎯 Fit that actually feels right</li>
+        <li>🌈 Sizes and colors for everyone</li>
+        <li>🚚 Fast shipping (because you don’t have time to wait)</li>
+        <li>💌 A community that gives back to healthcare workers</li>
+      </ul>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="{% static 'images/img6.png' %}" alt="Happy nurses wearing colorful scrubs" class="img-fluid rounded shadow-sm about-img">
+    </div>
+  </div>
+
+  <!-- Closing -->
+  <div class="text-center bg-light p-5 rounded shadow-sm">
+    <h2 class="fw-bold">More Than Just Scrubs</h2>
+    <img src="{% static 'images/img7.png' %}" alt="Healthcare worker smiling with folded arms" class="img-fluid rounded shadow-sm about-img my-3">
+    <p class="lead">At the end of the day, we’re here for you — the nurses, doctors, students, and every medical pro making a difference.  
+    Thanks for letting us be a part of your journey. 💙</p>
+  </div>
+
+</div>
+
+{% endblock %}

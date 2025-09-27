@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Gallery - DAGII Scrubs{% endblock %}
+
+{% block content %}
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Gallery</h2>
+    <div class="row g-4">
+      {% for img in images %}
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card h-100 shadow-sm border-0 gallery-card">
+            <!-- Image triggers modal -->
+            <a href="#" class="gallery-item" 
+               data-bs-toggle="modal" 
+               data-bs-target="#galleryModal"
+               data-src="{{ img.image.url }}" 
+               data-title="{{ img.title }}" 
+               data-caption="{{ img.caption }}"
+               data-index="{{ forloop.counter0 }}">
+              <img src="{{ img.image.url }}" class="card-img-top" alt="{{ img.title }}">
+            </a>
+            <div class="card-body text-center">
+              <h5 class="card-title">{{ img.title }}</h5>
+              <p class="card-text">{{ img.caption }}</p>
+            </div>
+          </div>
+        </div>
+      {% empty %}
+        <p class="text-center">No images in the gallery yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Single Reusable Modal -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+        <img id="modalImage" src="" class="img-fluid rounded mb-3" alt="">
+        <h5 id="modalTitle"></h5>
+        <p id="modalCaption"></p>
+      </div>
+      <div class="modal-footer justify-content-between">
+        <button type="button" class="btn btn-outline-primary" id="prevBtn">← Prev</button>
+        <button type="button" class="btn btn-outline-primary" id="nextBtn">Next →</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
